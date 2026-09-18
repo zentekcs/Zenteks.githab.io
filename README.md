@@ -1,2 +1,1450 @@
-# Zenteks.githab.io
-Zeni
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0a0a14">
+
+<!-- SEO Meta Tags -->
+<title>Zenteks — Дизайн превью для YouTube | Заказать игровые обложки от 300₽</title>
+<meta name="description" content="Профессиональный дизайн превью для YouTube видео и игровых обложек. 3 бесплатных превью для новых клиентов! Качественные превью за 300₽. Photoshop, After Effects.">
+<meta name="keywords" content="дизайн превью, превью для youtube, заказать превью, игровые превью, обложки для видео, youtube thumbnail, дизайн обложек, превью для игр, геймерские превью, превью 300 рублей, сделать превью, превью дизайнер">
+<meta name="author" content="Zenteks">
+<meta name="robots" content="index, follow">
+
+<!-- Yandex Verification -->
+<meta name="yandex-verification" content="69ae034b6ccf78cd" />
+
+<!-- Google Verification -->
+<meta name="google-site-verification" content="google200c2a29d4ab64b9" />
+
+<!-- Open Graph / Facebook / VK -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://zenteks.ru/">
+<meta property="og:title" content="Zenteks — Дизайн превью для YouTube | Заказать игровые обложки">
+<meta property="og:description" content="Профессиональный дизайн превью для YouTube видео. 3 бесплатных превью для новых клиентов! Качественные превью за 300₽.">
+<meta property="og:image" content="images/og-image.jpg">
+
+<!-- Twitter -->
+<meta property="twitter:card" content="summary_large_image">
+<meta property="twitter:url" content="https://zenteks.ru/">
+<meta property="twitter:title" content="Zenteks — Дизайн превью для YouTube | Заказать игровые обложки">
+<meta property="twitter:description" content="Профессиональный дизайн превью для YouTube видео. 3 бесплатных превью для новых клиентов! Качественные превью за 300₽.">
+<meta property="twitter:image" content="images/og-image.jpg">
+
+<!-- Canonical URL -->
+<link rel="canonical" href="https://zenteks.ru/">
+
+<!-- Favicon -->
+<link rel="icon" type="image/png" href="images/favicon.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+
+<!-- Structured Data for SEO -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "Zenteks",
+  "description": "Профессиональный дизайн превью для YouTube видео и игровых обложек",
+  "url": "https://zenteks.ru",
+  "priceRange": "300₽",
+  "offers": {
+    "@type": "Offer",
+    "description": "3 бесплатных превью для новых клиентов",
+    "price": "0",
+    "priceCurrency": "RUB"
+  }
+}
+</script>
+
+<style>
+  :root{
+    --bg:#0a0a14;
+    --bg-2:#12122a;
+    --accent:#ff2bd6;
+    --accent-2:#00e5ff;
+    --accent-3:#8a2bff;
+    --text:#e8e8f5;
+    --muted:#9a9ab0;
+    --card:#171730;
+    --border:rgba(255,255,255,.08);
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:'Inter',sans-serif;
+    background:var(--bg);
+    color:var(--text);
+    overflow-x:hidden;
+    line-height:1.6;
+    cursor:none;
+    position:relative;
+  }
+  
+  /* Анимированный градиентный фон */
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background: linear-gradient(
+      45deg,
+      rgba(255,43,214,.03),
+      rgba(0,229,255,.03),
+      rgba(138,43,255,.03)
+    );
+    background-size: 400% 400%;
+    animation: gradientShift 15s ease infinite;
+    z-index: -2;
+    pointer-events: none;
+  }
+
+  @keyframes gradientShift {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+  }
+
+  h1,h2,h3{font-family:'Orbitron',sans-serif;letter-spacing:.5px}
+  a,button{cursor:none}
+
+  /* ===== GLOBAL PARTICLES BACKGROUND ===== */
+  #globalParticles{
+    position:fixed;
+    top:0;left:0;
+    width:100%;height:100%;
+    z-index:-1;
+    pointer-events:none;
+  }
+
+  /* ===== PRELOADER ===== */
+  .preloader{
+    position:fixed;inset:0;
+    background:var(--bg);
+    display:flex;align-items:center;justify-content:center;
+    z-index:9999;
+    transition:opacity .6s, visibility .6s;
+  }
+  .preloader.hidden{opacity:0;visibility:hidden}
+  .loader{
+    width:60px;height:60px;
+    border:3px solid var(--border);
+    border-top-color:var(--accent);
+    border-right-color:var(--accent-2);
+    border-radius:50%;
+    animation:spin 1s linear infinite;
+  }
+  @keyframes spin{to{transform:rotate(360deg)}}
+
+  /* ===== CUSTOM CURSOR ===== */
+  .cursor-dot,.cursor-ring{
+    position:fixed;
+    pointer-events:none;
+    border-radius:50%;
+    z-index:10000;
+    transition:transform .15s ease-out;
+    mix-blend-mode:difference;
+  }
+  .cursor-dot{
+    width:8px;height:8px;
+    background:var(--accent);
+    transform:translate(-50%,-50%);
+  }
+  .cursor-ring{
+    width:40px;height:40px;
+    border:1.5px solid var(--accent-2);
+    transform:translate(-50%,-50%);
+    transition:width .3s, height .3s, background .3s;
+  }
+  .cursor-ring.hover{
+    width:60px;height:60px;
+    background:rgba(255,43,214,.15);
+    border-color:var(--accent);
+  }
+  @media(max-width:768px){
+    body,a,button{cursor:auto}
+    .cursor-dot,.cursor-ring{display:none}
+  }
+
+  /* ===== SCROLL PROGRESS ===== */
+  .scroll-progress{
+    position:fixed;top:0;left:0;
+    height:3px;width:0;
+    background:linear-gradient(90deg,var(--accent),var(--accent-2),var(--accent-3));
+    z-index:200;
+    transition:width .1s;
+  }
+
+  /* ===== NAV ===== */
+  nav{
+    position:fixed;top:0;left:0;right:0;
+    padding:18px 6%;
+    display:flex;justify-content:space-between;align-items:center;
+    background:rgba(10,10,20,.7);
+    backdrop-filter:blur(14px);
+    border-bottom:1px solid var(--border);
+    z-index:100;
+  }
+  .logo{
+    font-family:'Orbitron',sans-serif;
+    font-weight:900;font-size:1.3rem;
+    background:linear-gradient(90deg,var(--accent),var(--accent-2));
+    -webkit-background-clip:text;background-clip:text;color:transparent;
+  }
+  .nav-links{display:flex;gap:30px;list-style:none}
+  .nav-links a{
+    color:var(--text);text-decoration:none;font-weight:400;
+    font-size:.95rem;transition:color .3s;position:relative;
+  }
+  .nav-links a:hover{color:var(--accent-2)}
+  .nav-links a::after{
+    content:'';position:absolute;bottom:-6px;left:0;
+    width:0;height:2px;background:var(--accent);
+    transition:width .3s;
+  }
+  .nav-links a:hover::after{width:100%}
+  
+  /* Исправленный бургер-меню */
+  .burger{
+    display:none;
+    cursor:pointer;
+    width:30px;
+    height:20px;
+    position:relative;
+    background:none;
+    border:none;
+    padding:0;
+  }
+  
+  .burger span,
+  .burger::before,
+  .burger::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background: var(--text);
+    transition: all .3s;
+    left: 0;
+  }
+  
+  .burger::before { top: 0; }
+  .burger span { top: 50%; transform: translateY(-50%); }
+  .burger::after { bottom: 0; }
+  
+  .burger.active::before {
+    top: 50%;
+    transform: translateY(-50%) rotate(45deg);
+  }
+  
+  .burger.active span {
+    opacity: 0;
+  }
+  
+  .burger.active::after {
+    bottom: 50%;
+    transform: translateY(50%) rotate(-45deg);
+  }
+
+  /* ===== HERO ===== */
+  .hero{
+    min-height:100vh;
+    display:flex;align-items:center;justify-content:center;
+    padding:120px 6% 60px;
+    position:relative;
+    overflow:hidden;
+  }
+  .hero-content{max-width:1100px;text-align:center;z-index:2;position:relative; transition: transform 0.1s ease-out, opacity 0.3s;}
+  .hero-badge{
+    display:inline-block;
+    padding:8px 18px;
+    border:1px solid var(--accent);
+    border-radius:50px;
+    color:var(--accent);
+    font-size:.85rem;
+    margin-bottom:24px;
+    background:rgba(255,43,214,.08);
+    opacity:0;
+    animation:fadeUp .8s .3s forwards;
+  }
+  .hero h1{
+    font-size:clamp(2.5rem,7vw,5.5rem);
+    font-weight:900;
+    line-height:1.05;
+    margin-bottom:24px;
+    opacity:0;
+    animation:fadeUp .8s .5s forwards;
+  }
+  .hero h1 .grad{
+    background:linear-gradient(90deg,var(--accent),var(--accent-2),var(--accent-3));
+    -webkit-background-clip:text;background-clip:text;color:transparent;
+    position:relative;
+    display:inline-block;
+  }
+  .hero h1 .grad::before,
+  .hero h1 .grad::after{
+    content:attr(data-text);
+    position:absolute;top:0;left:0;
+    width:100%;height:100%;
+    background:var(--bg);
+  }
+  .hero h1 .grad::before{
+    left:2px;
+    text-shadow:-2px 0 var(--accent);
+    clip-path:inset(0 0 0 0);
+    animation:glitch-1 4s infinite linear alternate-reverse;
+  }
+  .hero h1 .grad::after{
+    left:-2px;
+    text-shadow:-2px 0 var(--accent-2);
+    clip-path:inset(0 0 0 0);
+    animation:glitch-2 4s infinite linear alternate-reverse;
+  }
+  @keyframes glitch-1{
+    0%,90%,100%{clip-path:inset(0 0 100% 0)}
+    92%{clip-path:inset(20% 0 60% 0)}
+    94%{clip-path:inset(60% 0 20% 0)}
+    96%{clip-path:inset(40% 0 40% 0)}
+  }
+  @keyframes glitch-2{
+    0%,90%,100%{clip-path:inset(0 0 100% 0)}
+    93%{clip-path:inset(70% 0 10% 0)}
+    95%{clip-path:inset(10% 0 70% 0)}
+    97%{clip-path:inset(50% 0 30% 0)}
+  }
+  .hero p{
+    font-size:1.15rem;color:var(--muted);
+    max-width:620px;margin:0 auto 40px;
+    opacity:0;
+    animation:fadeUp .8s .7s forwards;
+  }
+  .btns{
+    display:flex;gap:16px;justify-content:center;flex-wrap:wrap;
+    opacity:0;
+    animation:fadeUp .8s .9s forwards;
+  }
+  @keyframes fadeUp{
+    from{opacity:0;transform:translateY(30px)}
+    to{opacity:1;transform:translateY(0)}
+  }
+  .btn{
+    padding:14px 32px;
+    border-radius:50px;
+    font-weight:600;font-size:1rem;
+    text-decoration:none;
+    transition:all .3s;
+    display:inline-flex;align-items:center;gap:8px;
+    border:none;
+    font-family:inherit;
+  }
+  .btn-primary{
+    background:linear-gradient(90deg,var(--accent),var(--accent-3));
+    color:#fff;
+    box-shadow:0 8px 30px rgba(255,43,214,.35);
+  }
+  .btn-primary:hover{transform:translateY(-3px);box-shadow:0 12px 40px rgba(255,43,214,.55)}
+  .btn-ghost{
+    background:transparent;color:var(--text);
+    border:1px solid var(--border);
+  }
+  .btn-ghost:hover{border-color:var(--accent-2);color:var(--accent-2)}
+
+  /* ===== SECTION BASE ===== */
+  section{padding:100px 6%}
+  .section-head{text-align:center;margin-bottom:60px}
+  .section-head .tag{
+    color:var(--accent-2);font-size:.9rem;
+    letter-spacing:3px;text-transform:uppercase;
+    font-weight:600;margin-bottom:12px;display:block;
+  }
+  .section-head h2{font-size:clamp(2rem,4vw,3rem);font-weight:700}
+
+  /* ===== FILTERS ===== */
+  .filters{
+    display:flex;gap:12px;justify-content:center;
+    flex-wrap:wrap;margin-bottom:40px;
+  }
+  .filter-btn{
+    padding:10px 22px;
+    background:transparent;
+    border:1px solid var(--border);
+    color:var(--muted);
+    border-radius:50px;
+    font-family:inherit;
+    font-size:.9rem;
+    transition:all .3s;
+  }
+  .filter-btn:hover{color:var(--text);border-color:var(--accent-2)}
+  .filter-btn.active{
+    background:linear-gradient(90deg,var(--accent),var(--accent-3));
+    color:#fff;border-color:transparent;
+    box-shadow:0 4px 20px rgba(255,43,214,.3);
+  }
+
+  /* ===== WORKS GRID ===== */
+  .works-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fill,minmax(320px,1fr));
+    gap:24px;
+    max-width:1400px;margin:0 auto;
+  }
+  .work-card{
+    position:relative;
+    border-radius:16px;
+    overflow:hidden;
+    aspect-ratio:16/9;
+    border:1px solid var(--border);
+    transition:transform .4s, box-shadow .4s, opacity .4s;
+    will-change: transform;
+  }
+  .work-card.hide{
+    opacity:0;
+    transform:scale(.9);
+    pointer-events:none;
+    position:absolute;
+    visibility:hidden;
+  }
+  .work-card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 20px 50px rgba(138,43,255,.3);
+  }
+  .work-card .thumb{
+    width:100%;height:100%;
+    background-color: var(--card);
+    background-size:cover;background-position:center;
+    transition:transform .6s;
+  }
+  .work-card:hover .thumb{transform:scale(1.08)}
+  .work-card .overlay{
+    position:absolute;inset:0;
+    background:linear-gradient(180deg,transparent 40%,rgba(10,10,20,.95));
+    display:flex;flex-direction:column;justify-content:flex-end;
+    padding:24px;
+    opacity:0;transition:opacity .3s;
+  }
+  .work-card:hover .overlay{opacity:1}
+  .work-card h3{font-size:1.2rem;margin-bottom:6px}
+  .work-card span{color:var(--accent-2);font-size:.85rem}
+
+  /* ===== MODAL WITH SLIDER ===== */
+  .modal{
+    position:fixed;inset:0;
+    background:rgba(10,10,20,.95);
+    backdrop-filter:blur(10px);
+    display:flex;align-items:center;justify-content:center;
+    z-index:500;
+    opacity:0;visibility:hidden;
+    transition:opacity .3s, visibility .3s;
+    padding:20px;
+  }
+  .modal.active{opacity:1;visibility:visible}
+  .modal-content{
+    max-width:1200px;width:100%;
+    position:relative;
+    animation:zoomIn .4s;
+  }
+  @keyframes zoomIn{
+    from{transform:scale(.8);opacity:0}
+    to{transform:scale(1);opacity:1}
+  }
+  .modal-content .thumb{
+    width:100%;aspect-ratio:16/9;
+    border-radius:16px;
+    background-size:cover;background-position:center;
+    border:1px solid var(--border);
+  }
+  .modal-info{
+    margin-top:20px;text-align:center;
+  }
+  .modal-info h3{font-size:1.6rem;margin-bottom:6px}
+  .modal-info span{color:var(--accent-2)}
+  
+  /* Исправленный крестик закрытия */
+  .modal-close{
+    position:absolute;
+    top: -50px;
+    right: 0;
+    width: 40px;
+    height: 40px;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 50%;
+    color: var(--text);
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all .3s;
+    z-index: 20;
+    cursor: pointer;
+  }
+  
+  .modal-close::before,
+  .modal-close::after {
+    content: '';
+    position: absolute;
+    width: 18px;
+    height: 2px;
+    background: currentColor;
+    border-radius: 2px;
+  }
+  
+  .modal-close::before {
+    transform: rotate(45deg);
+  }
+  
+  .modal-close::after {
+    transform: rotate(-45deg);
+  }
+  
+  .modal-close:hover{background:var(--accent);border-color:transparent; transform: scale(1.1);}
+  
+  /* Slider Navigation */
+  .modal-nav{
+    position:absolute;
+    top:50%;
+    transform:translateY(-50%);
+    width:50px;
+    height:50px;
+    background:var(--card);
+    border:1px solid var(--border);
+    border-radius:50%;
+    color:var(--text);
+    font-size:1.5rem;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    cursor:pointer;
+    transition:all .3s;
+    z-index:10;
+  }
+  .modal-nav:hover{
+    background:var(--accent);
+    border-color:transparent;
+    transform:translateY(-50%) scale(1.1);
+  }
+  .modal-nav.prev{left:-70px}
+  .modal-nav.next{right:-70px}
+  .modal-counter{
+    position:absolute;
+    bottom:-40px;
+    left:50%;
+    transform:translateX(-50%);
+    color:var(--muted);
+    font-size:.9rem;
+    white-space:nowrap;
+  }
+  
+  @media(max-width:768px){
+    .modal-nav.prev{left:10px}
+    .modal-nav.next{right:10px}
+    .modal-nav{width:40px;height:40px;font-size:1.2rem}
+    .modal-close { top: -45px; }
+  }
+
+  /* ===== PROCESS SECTION ===== */
+  .process-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .process-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 40px 30px;
+    text-align: center;
+    transition: all .3s;
+  }
+
+  .process-card:hover {
+    transform: translateY(-10px);
+    border-color: var(--accent);
+  }
+
+  .process-num {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 3rem;
+    font-weight: 900;
+    background: linear-gradient(90deg, var(--accent), var(--accent-2));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    margin-bottom: 20px;
+  }
+
+  .process-card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 12px;
+  }
+
+  .process-card p {
+    color: var(--muted);
+    font-size: .95rem;
+  }
+
+  /* ===== FAQ SECTION ===== */
+  .faq-container {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .faq-item {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    margin-bottom: 16px;
+    overflow: hidden;
+    transition: all .3s;
+  }
+
+  .faq-item:hover {
+    border-color: var(--accent-2);
+  }
+
+  .faq-question {
+    width: 100%;
+    padding: 20px 24px;
+    background: transparent;
+    border: none;
+    color: var(--text);
+    font-size: 1.05rem;
+    font-weight: 600;
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    font-family: inherit;
+  }
+
+  .faq-icon {
+    font-size: 1.5rem;
+    transition: transform .3s;
+    color: var(--accent-2);
+    line-height: 1;
+  }
+
+  .faq-item.active .faq-icon {
+    transform: rotate(45deg);
+  }
+
+  .faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height .3s, padding .3s;
+  }
+
+  .faq-item.active .faq-answer {
+    max-height: 200px;
+    padding: 0 24px 20px;
+  }
+
+  .faq-answer p {
+    color: var(--muted);
+    line-height: 1.6;
+  }
+
+  /* ===== ABOUT ===== */
+  .about{
+    max-width:1100px;margin:0 auto;
+    display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;
+  }
+  .about-img{
+    aspect-ratio:1;
+    border-radius:20px;
+    overflow:hidden;
+    border:1px solid var(--border);
+    position:relative;
+  }
+  .about-img img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+  }
+  .about-text h2{font-size:2.2rem;margin-bottom:20px}
+  .about-text p{color:var(--muted);margin-bottom:16px}
+  .stats{display:flex;gap:30px;margin-top:30px;flex-wrap:wrap}
+  .stat .num{
+    font-family:'Orbitron',sans-serif;
+    font-size:2rem;font-weight:900;
+    background:linear-gradient(90deg,var(--accent),var(--accent-2));
+    -webkit-background-clip:text;background-clip:text;color:transparent;
+  }
+  .stat .lbl{color:var(--muted);font-size:.9rem}
+
+  /* ===== PRICING ===== */
+  .pricing-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:24px;
+    max-width:900px;
+    margin:0 auto;
+  }
+  .pricing-card{
+    background:var(--card);
+    border:1px solid var(--border);
+    border-radius:20px;
+    padding:40px 30px;
+    text-align:center;
+    position:relative;
+    overflow:hidden;
+    transition:transform .4s, box-shadow .4s;
+  }
+  .pricing-card:hover{
+    transform:translateY(-6px);
+    box-shadow:0 20px 50px rgba(138,43,255,.25);
+  }
+  .pricing-card.featured{
+    border-color:var(--accent);
+    background:linear-gradient(135deg,rgba(255,43,214,.08),rgba(138,43,255,.08));
+  }
+  .pricing-card.featured::before{
+    content:'';
+    position:absolute;
+    top:16px;right:16px;
+    font-size:1.5rem;
+  }
+  .pricing-label{
+    color:var(--accent-2);
+    font-size:.85rem;
+    letter-spacing:2px;
+    text-transform:uppercase;
+    font-weight:600;
+    margin-bottom:12px;
+  }
+  .pricing-title{
+    font-family:'Orbitron',sans-serif;
+    font-size:1.5rem;
+    font-weight:700;
+    margin-bottom:20px;
+  }
+  .pricing-price{
+    font-family:'Orbitron',sans-serif;
+    font-size:3rem;
+    font-weight:900;
+    margin-bottom:8px;
+    background:linear-gradient(90deg,var(--accent),var(--accent-2));
+    -webkit-background-clip:text;background-clip:text;color:transparent;
+  }
+  .pricing-price.free{
+    background:linear-gradient(90deg,#00ff88,var(--accent-2));
+    -webkit-background-clip:text;background-clip:text;color:transparent;
+  }
+  .pricing-sub{
+    color:var(--muted);
+    font-size:.95rem;
+    margin-bottom:24px;
+  }
+  .pricing-features{
+    list-style:none;
+    text-align:left;
+    margin-bottom:30px;
+  }
+  .pricing-features li{
+    padding:8px 0;
+    color:var(--text);
+    font-size:.95rem;
+    border-bottom:1px solid var(--border);
+    display:flex;
+    align-items:center;
+    gap:10px;
+  }
+  .pricing-features li:last-child{border-bottom:none}
+  .pricing-features li::before{
+    content:'✓';
+    color:var(--accent-2);
+    font-weight:700;
+  }
+  .pricing-btn{
+    display:inline-block;
+    padding:12px 28px;
+    border-radius:50px;
+    font-weight:600;
+    text-decoration:none;
+    transition:all .3s;
+    font-size:.95rem;
+  }
+  .pricing-btn.primary{
+    background:linear-gradient(90deg,var(--accent),var(--accent-3));
+    color:#fff;
+    box-shadow:0 6px 20px rgba(255,43,214,.3);
+  }
+  .pricing-btn.primary:hover{
+    transform:translateY(-2px);
+    box-shadow:0 10px 30px rgba(255,43,214,.5);
+  }
+  .pricing-btn.ghost{
+    background:transparent;
+    color:var(--text);
+    border:1px solid var(--border);
+  }
+  .pricing-btn.ghost:hover{
+    border-color:var(--accent-2);
+    color:var(--accent-2);
+  }
+
+  /* ===== CONTACT ===== */
+  .contact-box{
+    max-width:800px;margin:0 auto;
+    text-align:center;
+    padding:60px 40px;
+    background:linear-gradient(135deg,rgba(255,43,214,.1),rgba(0,229,255,.08));
+    border:1px solid var(--border);
+    border-radius:24px;
+    backdrop-filter:blur(10px);
+  }
+  .contact-box h2{font-size:2.2rem;margin-bottom:16px}
+  .contact-box p{color:var(--muted);margin-bottom:30px}
+  .contact-text{
+    font-size:1.1rem;
+    margin-bottom:30px;
+    color:var(--text);
+  }
+  .contact-buttons{
+    display:flex;
+    gap:20px;
+    justify-content:center;
+    flex-wrap:wrap;
+    margin-top:30px;
+  }
+  .contact-btn{
+    width:120px;
+    height:120px;
+    border-radius:50%;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    gap:10px;
+    text-decoration:none;
+    transition:all .3s;
+    border:1px solid var(--border);
+    background:var(--card);
+    color:var(--text);
+  }
+  .contact-btn svg{
+    width:40px;
+    height:40px;
+    fill:currentColor;
+  }
+  .contact-btn span{
+    font-size:.85rem;
+    font-weight:600;
+  }
+  .contact-btn.telegram{
+    background:linear-gradient(135deg,#0088cc,#0099ff);
+    border-color:transparent;
+    color:#fff;
+  }
+  .contact-btn.telegram:hover{
+    transform:translateY(-6px);
+    box-shadow:0 12px 30px rgba(0,136,204,.5);
+  }
+  .contact-btn.email{
+    background:linear-gradient(135deg,#ff2bd6,#8a2bff);
+    border-color:transparent;
+    color:#fff;
+  }
+  .contact-btn.email:hover{
+    transform:translateY(-6px);
+    box-shadow:0 12px 30px rgba(255,43,214,.5);
+  }
+
+  /* ===== BACK TO TOP ===== */
+  .to-top{
+    position:fixed;bottom:30px;right:30px;
+    width:50px;height:50px;
+    border-radius:50%;
+    background:linear-gradient(135deg,var(--accent),var(--accent-3));
+    color:#fff;border:none;
+    display:flex;align-items:center;justify-content:center;
+    font-size:1.3rem;
+    opacity:0;visibility:hidden;
+    transition:all .3s;
+    z-index:90;
+    box-shadow:0 8px 25px rgba(255,43,214,.4);
+  }
+  .to-top.visible{opacity:1;visibility:visible}
+  .to-top:hover{transform:translateY(-4px)}
+
+  /* ===== FOOTER ===== */
+  footer{
+    text-align:center;
+    padding:30px 6%;
+    border-top:1px solid var(--border);
+    color:var(--muted);
+    font-size:.9rem;
+  }
+
+  /* ===== ANIMATIONS ===== */
+  .reveal{opacity:0;transform:translateY(40px);transition:all .8s ease}
+  .reveal.visible{opacity:1;transform:translateY(0)}
+
+  /* ===== RESPONSIVE ===== */
+  @media(max-width:768px){
+    .nav-links{
+      position:fixed;top:65px;right:-100%;
+      flex-direction:column;
+      background:var(--bg-2);
+      width:70%;height:calc(100vh - 65px);
+      padding:40px 30px;
+      transition:right .3s;
+    }
+    .nav-links.active{right:0}
+    .burger{display:block}
+    .about{grid-template-columns:1fr;gap:40px}
+    .about-img{max-width:300px;margin:0 auto}
+    section{padding:70px 6%}
+    .to-top{bottom:20px;right:20px;width:44px;height:44px}
+    .contact-btn{width:100px;height:100px}
+    .contact-btn svg{width:32px;height:32px}
+    .contact-btn span{font-size:.75rem}
+    .pricing-grid{grid-template-columns:1fr}
+  }
+</style>
+</head>
+<body>
+
+<!-- GLOBAL PARTICLES -->
+<canvas id="globalParticles"></canvas>
+
+<!-- PRELOADER -->
+<div class="preloader" id="preloader"><div class="loader"></div></div>
+
+<!-- CUSTOM CURSOR -->
+<div class="cursor-dot" id="cursorDot"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+
+<!-- SCROLL PROGRESS -->
+<div class="scroll-progress" id="scrollProgress"></div>
+
+<!-- NAV -->
+<nav>
+  <div class="logo">Zenteks</div>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#home">Главная</a></li>
+    <li><a href="#works">Работы</a></li>
+    <li><a href="#about">Обо мне</a></li>
+    <li><a href="#pricing">Расценки</a></li>
+    <li><a href="#contact">Контакты</a></li>
+  </ul>
+  <button class="burger" id="burger" aria-label="Меню"><span></span></button>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-content">
+    <span class="hero-badge"> Game Thumbnail Designer</span>
+    <h1>Создаю <span class="grad" data-text="кликабельные">кликабельные</span><br>превью для видео</h1>
+    <p>Делаю превью для YouTube видео, которые привлекают внимание и заставляют кликнуть именно на ваш контент.</p>
+    <div class="btns">
+      <a href="#works" class="btn btn-primary">Смотреть работы →</a>
+      <a href="#contact" class="btn btn-ghost">Связаться</a>
+    </div>
+  </div>
+</section>
+
+<!-- WORKS -->
+<section id="works">
+  <div class="section-head reveal">
+    <span class="tag">Portfolio</span>
+    <h2>Избранные работы</h2>
+  </div>
+
+  <div class="filters reveal">
+    <button class="filter-btn active" data-filter="all">Все</button>
+    <button class="filter-btn" data-filter="youtube">YouTube</button>
+    <button class="filter-btn" data-filter="game">Game Cover</button>
+  </div>
+
+  <div class="works-grid">
+    <div class="work-card reveal" data-cat="youtube" data-title="Глава 3" data-type="YouTube Thumbnail" data-hq-image="images/hq/glava3_hq.jpg">
+      <div class="thumb" style="background-image:url('images/lq/glava3_lq.jpg')"></div>
+      <div class="overlay"><h3>Глава 3</h3><span>YouTube Thumbnail</span></div>
+    </div>
+    <div class="work-card reveal" data-cat="youtube" data-title="Глава 2" data-type="YouTube Thumbnail" data-hq-image="images/hq/glava2_hq.jpg">
+      <div class="thumb" style="background-image:url('images/lq/glava2_lq.jpg')"></div>
+      <div class="overlay"><h3>Глава 2</h3><span>YouTube Thumbnail</span></div>
+    </div>
+    <div class="work-card reveal" data-cat="game" data-title="Лудомания" data-type="Game Cover" data-hq-image="images/hq/ludomaniya_hq.jpg">
+      <div class="thumb" style="background-image:url('images/lq/ludomaniya_lq.jpg')"></div>
+      <div class="overlay"><h3>Лудомания</h3><span>Game Cover</span></div>
+    </div>
+    <div class="work-card reveal" data-cat="youtube" data-title="Danikz" data-type="YouTube Thumbnail" data-hq-image="images/hq/danikz_hq.jpg">
+      <div class="thumb" style="background-image:url('images/lq/danikz_lq.jpg')"></div>
+      <div class="overlay"><h3>Danikz</h3><span>YouTube Thumbnail</span></div>
+    </div>
+    <div class="work-card reveal" data-cat="game" data-title="MECH" data-type="Game Cover" data-hq-image="images/hq/mech_hq.jpg">
+      <div class="thumb" style="background-image:url('images/lq/mech_lq.jpg')"></div>
+      <div class="overlay"><h3>MECH</h3><span>Game Cover</span></div>
+    </div>
+    <div class="work-card reveal" data-cat="game" data-title="Mafia Boss" data-type="Game Cover" data-hq-image="images/hq/mafia_boss_hq.jpg">
+      <div class="thumb" style="background-image:url('images/lq/mafia_boss_lq.jpg')"></div>
+      <div class="overlay"><h3>Mafia Boss</h3><span>Game Cover</span></div>
+    </div>
+    <div class="work-card reveal" data-cat="youtube" data-title="Tier List" data-type="YouTube Thumbnail" data-hq-image="images/hq/tier_list_hq.jpg">
+      <div class="thumb" style="background-image:url('images/lq/tier_list_lq.jpg')"></div>
+      <div class="overlay"><h3>Tier List</h3><span>YouTube Thumbnail</span></div>
+    </div>
+    <div class="work-card reveal" data-cat="youtube" data-title="Бизнес" data-type="YouTube Thumbnail" data-hq-image="images/hq/business_hq.jpg">
+      <div class="thumb" style="background-image:url('images/lq/business_lq.jpg')"></div>
+      <div class="overlay"><h3>Бизнес</h3><span>YouTube Thumbnail</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section id="process">
+  <div class="section-head reveal">
+    <span class="tag">Process</span>
+    <h2>Как я работаю</h2>
+  </div>
+  
+  <div class="process-grid">
+    <div class="process-card reveal">
+      <div class="process-num">01</div>
+      <h3>Обсуждение</h3>
+      <p>Узнаю ваши цели и стиль канала</p>
+    </div>
+    <div class="process-card reveal">
+      <div class="process-num">02</div>
+      <h3>Концепция</h3>
+      <p>Создаю 2-3 варианта превью</p>
+    </div>
+    <div class="process-card reveal">
+      <div class="process-num">03</div>
+      <h3>Доработка</h3>
+      <p>Вношу правки до идеала</p>
+    </div>
+    <div class="process-card reveal">
+      <div class="process-num">04</div>
+      <h3>Результат</h3>
+      <p>Отдаю готовое превью</p>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="about">
+    <div class="about-img reveal">
+      <img src="images/avatar.jpg" alt="Zenteks Avatar">
+    </div>
+    <div class="about-text reveal">
+      <span class="tag" style="color:var(--accent-2);font-size:.9rem;letter-spacing:3px;text-transform:uppercase;font-weight:600;">About me</span>
+      <h2>Привет, я Макс 👋</h2>
+      <p>Дизайнер с фокусом на игровую индустрию. Уже несколько лет создаю превью, которые реально работают и привлекают зрителей к вашим видео.</p>
+      <p>Работаю в Photoshop и After Effects. Понимаю, что цепляет зрителя за долю секунды.</p>
+      <p>Повышаю кликабельность ваших YouTube видео с помощью ярких и запоминающихся превью.</p>
+      <div class="stats">
+        <div class="stat"><div class="num" data-target="150">0</div><div class="lbl">Созданных превью</div></div>
+        <div class="stat"><div class="num" data-target="50">0</div><div class="lbl">Довольных клиентов</div></div>
+        <div class="stat"><div class="num" data-target="3">0</div><div class="lbl">Года опыта</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section id="pricing">
+  <div class="section-head reveal">
+    <span class="tag">Pricing</span>
+    <h2>Расценки</h2>
+  </div>
+
+  <div class="pricing-grid">
+    <div class="pricing-card featured reveal">
+      <div class="pricing-label">Специальное предложение</div>
+      <div class="pricing-title">Первый заказ</div>
+      <div class="pricing-price free">БЕСПЛАТНО</div>
+      <div class="pricing-sub">3 тестовых превью для новых клиентов</div>
+      <ul class="pricing-features">
+        <li>3 превью в подарок</li>
+        <li>Без предоплаты</li>
+        <li>Правки включены</li>
+      </ul>
+      <a href="#contact" class="pricing-btn primary">Попробовать</a>
+    </div>
+
+    <div class="pricing-card reveal">
+      <div class="pricing-label">Стандарт</div>
+      <div class="pricing-title">Обычный заказ</div>
+      <div class="pricing-price">300₽</div>
+      <div class="pricing-sub">за одно превью</div>
+      <ul class="pricing-features">
+        <li>1 превью — 300 рублей</li>
+        <li>Правки включены</li>
+        <li>Исходник по запросу</li>
+      </ul>
+      <a href="#contact" class="pricing-btn ghost">Заказать</a>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq">
+  <div class="section-head reveal">
+    <span class="tag">FAQ</span>
+    <h2>Частые вопросы</h2>
+  </div>
+  
+  <div class="faq-container">
+    <div class="faq-item reveal">
+      <button class="faq-question">
+        Сколько времени занимает создание превью?
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-answer">
+        <p>Обычно 1-2 дня. Срочные заказы выполняю за несколько часов.</p>
+      </div>
+    </div>
+    
+    <div class="faq-item reveal">
+      <button class="faq-question">
+        Можно ли получить исходник?
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-answer">
+        <p>Да, исходник PSD предоставляется по запросу бесплатно.</p>
+      </div>
+    </div>
+    
+    <div class="faq-item reveal">
+      <button class="faq-question">
+        Какие форматы файлов вы отдаёте?
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-answer">
+        <p>JPG, PNG, PSD. Оптимальный размер для YouTube: 1280x720px.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="contact-box reveal">
+    <h2>Готов к сотрудничеству?</h2>
+    <p class="contact-text">Если вы готовы создать крутое превью для вашего видео — свяжитесь со мной!</p>
+    
+    <div class="contact-buttons">
+      <a href="https://t.me/Zentekcs" target="_blank" class="contact-btn telegram" aria-label="Telegram">
+        <svg viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12s5.37 12 12 12 12-5.37 12-12S18.63 0 12 0zm5.56 8.16l-1.86 8.76c-.14.62-.5.77-1.01.48l-2.8-2.06-1.35 1.3c-.15.15-.28.28-.57.28l.2-2.88 5.25-4.74c.23-.2-.05-.32-.35-.12l-6.48 4.08-2.79-.87c-.6-.19-.62-.6.13-.89l10.92-4.21c.5-.19.95.12.79.87z"/></svg>
+        <span>Telegram</span>
+      </a>
+      <a href="https://mail.google.com/mail/?view=cm&fs=1&to=zentekcs2286@gmail.com" target="_blank" class="contact-btn email" aria-label="Email">
+        <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+        <span>Email</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- MODAL WITH SLIDER -->
+<div class="modal" id="modal">
+  <div class="modal-content">
+    <button class="modal-close" id="modalClose" aria-label="Закрыть"></button>
+    <button class="modal-nav prev" id="modalPrev" aria-label="Предыдущее"></button>
+    <button class="modal-nav next" id="modalNext" aria-label="Следующее">❯</button>
+    <div class="thumb" id="modalThumb"></div>
+    <div class="modal-info">
+      <h3 id="modalTitle"></h3>
+      <span id="modalType"></span>
+    </div>
+    <div class="modal-counter" id="modalCounter"></div>
+  </div>
+</div>
+
+<!-- BACK TO TOP -->
+<button class="to-top" id="toTop" aria-label="Наверх">↑</button>
+
+<footer>
+  © 2026 Zenteks — Все права защищены. Дизайн превью для YouTube и игр.
+</footer>
+
+<script>
+  // ===== PRELOADER =====
+  window.addEventListener('load', () => {
+    setTimeout(() => document.getElementById('preloader').classList.add('hidden'), 400);
+  });
+
+  // ===== CUSTOM CURSOR =====
+  const dot = document.getElementById('cursorDot');
+  const ring = document.getElementById('cursorRing');
+  let mx=0,my=0,rx=0,ry=0;
+  document.addEventListener('mousemove', e => {
+    mx=e.clientX; my=e.clientY;
+    dot.style.left=mx+'px'; dot.style.top=my+'px';
+  });
+  function animateRing(){
+    rx += (mx-rx)*.15;
+    ry += (my-ry)*.15;
+    ring.style.left=rx+'px'; ring.style.top=ry+'px';
+    requestAnimationFrame(animateRing);
+  }
+  animateRing();
+  document.querySelectorAll('a, button, .work-card').forEach(el => {
+    el.addEventListener('mouseenter', () => ring.classList.add('hover'));
+    el.addEventListener('mouseleave', () => ring.classList.remove('hover'));
+  });
+
+  // ===== SCROLL PROGRESS & PARALLAX =====
+  const progress = document.getElementById('scrollProgress');
+  const heroContent = document.querySelector('.hero-content');
+  
+  window.addEventListener('scroll', () => {
+    const h = document.documentElement;
+    const scrolled = (h.scrollTop) / (h.scrollHeight - h.clientHeight) * 100;
+    progress.style.width = scrolled + '%';
+    
+    // Parallax эффект для Hero
+    if(heroContent) {
+      heroContent.style.transform = `translateY(${window.pageYOffset * 0.5}px)`;
+      heroContent.style.opacity = 1 - window.pageYOffset / 700;
+    }
+  });
+
+  // ===== BURGER MENU =====
+  const burger = document.getElementById('burger');
+  const navLinks = document.getElementById('navLinks');
+  burger.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+    burger.classList.toggle('active');
+  });
+  document.querySelectorAll('.nav-links a').forEach(a =>
+    a.addEventListener('click', () => {
+      navLinks.classList.remove('active');
+      burger.classList.remove('active');
+    })
+  );
+
+  // ===== REVEAL ON SCROLL =====
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('visible'); });
+  }, { threshold: 0.15 });
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+  // ===== COUNT UP =====
+  const statObserver = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if(e.isIntersecting){
+        const el = e.target;
+        const target = +el.dataset.target;
+        let current = 0;
+        const step = Math.max(1, Math.ceil(target/50));
+        const timer = setInterval(() => {
+          current += step;
+          if(current >= target){ current = target; clearInterval(timer); }
+          el.textContent = current + (target >= 100 ? '+' : '');
+        }, 30);
+        statObserver.unobserve(el);
+      }
+    });
+  }, { threshold: 0.5 });
+  document.querySelectorAll('.num').forEach(el => statObserver.observe(el));
+
+  // ===== FILTERS =====
+  const filterBtns = document.querySelectorAll('.filter-btn');
+  const cards = document.querySelectorAll('.work-card');
+  filterBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      filterBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      const f = btn.dataset.filter;
+      cards.forEach(c => {
+        if(f === 'all' || c.dataset.cat === f) c.classList.remove('hide');
+        else c.classList.add('hide');
+      });
+    });
+  });
+
+  // ===== 3D TILT EFFECT FOR CARDS =====
+  cards.forEach(card => {
+    card.addEventListener('mousemove', (e) => {
+      const rect = card.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+      const centerX = rect.width / 2;
+      const centerY = rect.height / 2;
+      const rotateX = (y - centerY) / 10;
+      const rotateY = (centerX - x) / 10;
+      
+      card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-8px)`;
+    });
+    
+    card.addEventListener('mouseleave', () => {
+      card.style.transform = 'perspective(1000px) rotateX(0) rotateY(0) translateY(0)';
+    });
+  });
+
+  // ===== MAGNETIC BUTTONS =====
+  document.querySelectorAll('.btn, .contact-btn').forEach(btn => {
+    btn.addEventListener('mousemove', (e) => {
+      const rect = btn.getBoundingClientRect();
+      const x = e.clientX - rect.left - rect.width / 2;
+      const y = e.clientY - rect.top - rect.height / 2;
+      btn.style.transform = `translate(${x * 0.3}px, ${y * 0.3}px)`;
+    });
+    
+    btn.addEventListener('mouseleave', () => {
+      btn.style.transform = 'translate(0, 0)';
+    });
+  });
+
+  // ===== MODAL WITH SLIDER =====
+  const modal = document.getElementById('modal');
+  const modalThumb = document.getElementById('modalThumb');
+  const modalTitle = document.getElementById('modalTitle');
+  const modalType = document.getElementById('modalType');
+  const modalCounter = document.getElementById('modalCounter');
+  let currentIndex = 0;
+  let visibleCards = Array.from(cards).filter(card => !card.classList.contains('hide'));
+
+  function updateModal(index){
+    const card = visibleCards[index];
+    const hqImage = card.dataset.hqImage;
+    modalThumb.style.backgroundImage = `url('${hqImage}')`;
+    modalTitle.textContent = card.dataset.title;
+    modalType.textContent = card.dataset.type;
+    modalCounter.textContent = `${index + 1} из ${visibleCards.length}`;
+  }
+
+  function openModal(index){
+    currentIndex = index;
+    updateModal(currentIndex);
+    modal.classList.add('active');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeModal(){
+    modal.classList.remove('active');
+    document.body.style.overflow = '';
+  }
+
+  function nextImage(){
+    currentIndex = (currentIndex + 1) % visibleCards.length;
+    updateModal(currentIndex);
+  }
+
+  function prevImage(){
+    currentIndex = (currentIndex - 1 + visibleCards.length) % visibleCards.length;
+    updateModal(currentIndex);
+  }
+
+  cards.forEach((card, index) => {
+    card.addEventListener('click', () => {
+      visibleCards = Array.from(cards).filter(c => !c.classList.contains('hide'));
+      const newIndex = visibleCards.indexOf(card);
+      openModal(newIndex);
+    });
+  });
+
+  document.getElementById('modalClose').addEventListener('click', closeModal);
+  document.getElementById('modalNext').addEventListener('click', (e) => {
+    e.stopPropagation();
+    nextImage();
+  });
+  document.getElementById('modalPrev').addEventListener('click', (e) => {
+    e.stopPropagation();
+    prevImage();
+  });
+  modal.addEventListener('click', e => { if(e.target === modal || e.target.closest('.modal-content') === null) closeModal(); });
+  document.addEventListener('keydown', e => {
+    if(e.key === 'Escape') closeModal();
+    if(e.key === 'ArrowRight') nextImage();
+    if(e.key === 'ArrowLeft') prevImage();
+  });
+
+  // ===== SWIPE FOR MOBILE =====
+  let touchStartX = 0;
+  let touchEndX = 0;
+
+  modal.addEventListener('touchstart', (e) => {
+    touchStartX = e.changedTouches[0].screenX;
+  });
+
+  modal.addEventListener('touchend', (e) => {
+    touchEndX = e.changedTouches[0].screenX;
+    handleSwipe();
+  });
+
+  function handleSwipe() {
+    const swipeThreshold = 50;
+    if(touchEndX < touchStartX - swipeThreshold) nextImage();
+    if(touchEndX > touchStartX + swipeThreshold) prevImage();
+  }
+
+  // ===== FAQ ACCORDION =====
+  document.querySelectorAll('.faq-question').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const item = btn.parentElement;
+      // Закрываем другие открытые элементы
+      document.querySelectorAll('.faq-item').forEach(otherItem => {
+        if(otherItem !== item) otherItem.classList.remove('active');
+      });
+      item.classList.toggle('active');
+    });
+  });
+
+  // ===== BACK TO TOP =====
+  const toTop = document.getElementById('toTop');
+  window.addEventListener('scroll', () => {
+    toTop.classList.toggle('visible', window.scrollY > 500);
+  });
+  toTop.addEventListener('click', () => window.scrollTo({top:0, behavior:'smooth'}));
+
+  // ===== GLOBAL PARTICLES (пыль по всему сайту) =====
+  const gCanvas = document.getElementById('globalParticles');
+  const gCtx = gCanvas.getContext('2d');
+  let gParticles = [];
+  
+  // Оптимизация частиц для мобильных
+  const particleCount = window.innerWidth < 768 ? 30 : 80;
+  
+  function gResize(){
+    gCanvas.width = window.innerWidth;
+    gCanvas.height = window.innerHeight;
+  }
+  gResize();
+  window.addEventListener('resize', gResize);
+  class GParticle{
+    constructor(){
+      this.x = Math.random()*gCanvas.width;
+      this.y = Math.random()*gCanvas.height;
+      this.vx = (Math.random()-.5)*.15;
+      this.vy = (Math.random()-.5)*.15;
+      this.r = Math.random()*1.2+.3;
+      this.alpha = Math.random()*.3+.1;
+    }
+    update(){
+      this.x += this.vx;
+      this.y += this.vy;
+      if(this.x<0) this.x = gCanvas.width;
+      if(this.x>gCanvas.width) this.x = 0;
+      if(this.y<0) this.y = gCanvas.height;
+      if(this.y>gCanvas.height) this.y = 0;
+    }
+    draw(){
+      gCtx.beginPath();
+      gCtx.arc(this.x,this.y,this.r,0,Math.PI*2);
+      gCtx.fillStyle = `rgba(138,43,255,${this.alpha})`;
+      gCtx.fill();
+    }
+  }
+  for(let i=0;i<particleCount;i++) gParticles.push(new GParticle());
+  function gAnimate(){
+    gCtx.clearRect(0,0,gCanvas.width,gCanvas.height);
+    gParticles.forEach(p => { p.update(); p.draw(); });
+    requestAnimationFrame(gAnimate);
+  }
+  gAnimate();
+</script>
+
+</body>
+</html>
